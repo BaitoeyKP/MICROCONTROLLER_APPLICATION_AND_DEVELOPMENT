@@ -1,0 +1,6 @@
+../Core/Src/main.c:72:5:main	2
+../Core/Src/main.c:130:6:SystemClock_Config	4
+../Core/Src/main.c:181:6:displayNumber	3
+../Core/Src/main.c:190:6:displayNumber_clk	3
+../Core/Src/main.c:211:6:MPU_Config	1
+../Core/Src/main.c:242:6:Error_Handler	1
