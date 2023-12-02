@@ -1,0 +1,36 @@
+10:27:55 **** Incremental Build of configuration Debug for project 767_SPI_ILI9341_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -I"D:/BAITOEY/University/2566/1-2566/MAD/64010045_exam/767_SPI_ILI9341_2/Drivers/ILI9341" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:235:30: warning: too many arguments for format [-Wformat-extra-args]
+  235 |                 sprintf(str, "%.0f%%", dutyCycleB * 100, adc_val);
+      |                              ^~~~~~~~
+../Core/Src/main.c:148:17: warning: unused variable 'dataBuffer' [-Wunused-variable]
+  148 |         uint8_t dataBuffer[8];
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:147:17: warning: unused variable 'cmdBuffer' [-Wunused-variable]
+  147 |         uint8_t cmdBuffer[3];
+      |                 ^~~~~~~~~
+../Core/Src/main.c:146:14: warning: unused variable 'temp' [-Wunused-variable]
+  146 |         char temp[100];
+      |              ^~~~
+../Core/Src/main.c:145:14: warning: unused variable 'human' [-Wunused-variable]
+  145 |         char human[100];
+      |              ^~~~~
+../Core/Src/main.c:144:14: warning: unused variable 'str' [-Wunused-variable]
+  144 |         char str[50];
+      |              ^~~
+arm-none-eabi-gcc -o "767_SPI_ILI9341_2.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\BAITOEY\University\2566\1-2566\MAD\64010045_exam\767_SPI_ILI9341_2\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="767_SPI_ILI9341_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 767_SPI_ILI9341_2.elf
+ 
+arm-none-eabi-size   767_SPI_ILI9341_2.elf 
+arm-none-eabi-objdump -h -S  767_SPI_ILI9341_2.elf  > "767_SPI_ILI9341_2.list"
+   text	   data	    bss	    dec	    hex	filename
+  39040	    484	   2396	  41920	   a3c0	767_SPI_ILI9341_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: 767_SPI_ILI9341_2.list
+ 
+
+10:27:57 Build Finished. 0 errors, 6 warnings. (took 1s.729ms)
+

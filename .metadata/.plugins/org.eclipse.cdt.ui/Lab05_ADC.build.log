@@ -1,24 +1,19 @@
-17:03:36 **** Incremental Build of configuration Debug for project Lab05_ADC ****
+16:47:45 **** Incremental Build of configuration Debug for project Lab05_ADC ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F767xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'displayHEX':
-../Core/Src/main.c:226:31: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  226 |         sprintf(hexNum, "0x%08X", decNum);
+../Core/Src/main.c:213:31: warning: format '%X' expects argument of type 'unsigned int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  213 |         sprintf(hexNum, "0x%08X", decNum);
       |                            ~~~^   ~~~~~~
       |                               |   |
       |                               |   uint32_t {aka long unsigned int}
       |                               unsigned int
       |                            %08lX
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:57:13: warning: 'MPU_Initialize' declared 'static' but never defined [-Wunused-function]
-   57 | static void MPU_Initialize(void);
-      |             ^~~~~~~~~~~~~~
-../Core/Src/main.c: In function 'displayHEX':
-../Core/Src/main.c:226:32: warning: 'sprintf' writing a terminating nul past the end of the destination [-Wformat-overflow=]
-  226 |         sprintf(hexNum, "0x%08X", decNum);
+../Core/Src/main.c:213:32: warning: 'sprintf' writing a terminating nul past the end of the destination [-Wformat-overflow=]
+  213 |         sprintf(hexNum, "0x%08X", decNum);
       |                                ^
-../Core/Src/main.c:226:9: note: 'sprintf' output 11 bytes into a destination of size 10
-  226 |         sprintf(hexNum, "0x%08X", decNum);
+../Core/Src/main.c:213:9: note: 'sprintf' output 11 bytes into a destination of size 10
+  213 |         sprintf(hexNum, "0x%08X", decNum);
       |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 arm-none-eabi-gcc -o "Lab05_ADC.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\AVI003\STM32CubeIDE\MAD_Lab\Lab05_ADC\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab05_ADC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Lab05_ADC.elf
@@ -26,11 +21,11 @@ Finished building target: Lab05_ADC.elf
 arm-none-eabi-size   Lab05_ADC.elf 
 arm-none-eabi-objdump -h -S  Lab05_ADC.elf  > "Lab05_ADC.list"
    text	   data	    bss	    dec	    hex	filename
-  27032	    476	   2236	  29744	   7430	Lab05_ADC.elf
+  26736	    476	   2236	  29448	   7308	Lab05_ADC.elf
 Finished building: default.size.stdout
  
 Finished building: Lab05_ADC.list
  
 
-17:03:38 Build Finished. 0 errors, 3 warnings. (took 1s.632ms)
+16:47:47 Build Finished. 0 errors, 2 warnings. (took 1s.439ms)
 
